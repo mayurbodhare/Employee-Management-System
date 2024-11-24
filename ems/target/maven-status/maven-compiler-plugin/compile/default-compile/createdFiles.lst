@@ -1,5 +1,7 @@
-org\openjfx\ems\App.class
-org\openjfx\ems\SecondaryController.class
-module-info.class
-org\openjfx\ems\PrimaryController.class
+org\openjfx\ems\AdminLoginController.class
 org\openjfx\ems\HomeController.class
+org\openjfx\ems\AdminSignupController.class
+org\openjfx\ems\App.class
+org\openjfx\ems\UserLoginController.class
+org\openjfx\ems\UserSignupController.class
+module-info.class
