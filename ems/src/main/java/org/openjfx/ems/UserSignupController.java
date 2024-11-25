@@ -14,9 +14,12 @@ import org.hibernate.service.ServiceRegistry;
 import org.openjfx.ems.Entity.User;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.scene.Parent;
+
 
 public class UserSignupController implements Initializable{
 	
@@ -84,6 +87,13 @@ public class UserSignupController implements Initializable{
             // Commit the transaction
             tx.commit();
 
+            // TODO: send the data of the user
+            
+         // Pass the newUser to the dashboard
+            App.setRoot("user_dashboard", newUser);
+            
+//            App.setRoot("user_dashboard");
+            
             System.out.println("User Signed Up Successfully!");
             
 		} catch (Exception e) {

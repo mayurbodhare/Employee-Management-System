@@ -11,27 +11,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity"
-	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
-	prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1"
-	xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="org.openjfx.ems.UserLoginController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.ems.UserLoginController">
 	<children>
-		<ImageView fitHeight="163.0" fitWidth="233.0" layoutX="13.0"
-			layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+		<ImageView fitHeight="163.0" fitWidth="233.0" layoutX="13.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
 			<image>
 				<Image url="@images/user_login.jpeg" />
 			</image>
 		</ImageView>
-		<Text layoutX="300.0" layoutY="51.0" strokeType="OUTSIDE"
-			strokeWidth="0.0" text=" User Login" textAlignment="CENTER"
-			wrappingWidth="248.5367431640625">
+		<Text layoutX="300.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" User Login" textAlignment="CENTER" wrappingWidth="248.5367431640625">
 			<font>
 				<Font size="28.0" />
 			</font>
 		</Text>
-		<ImageView fitHeight="50.0" fitWidth="61.0" layoutX="390.0"
-			layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+		<ImageView fitHeight="50.0" fitWidth="61.0" layoutX="390.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
 			<image>
 				<Image url="@images/user_login_icon.png" />
 			</image>
@@ -41,40 +33,35 @@
 				<Font size="18.0" />
 			</font>
 		</Label>
-		<TextField layoutX="398.0" layoutY="151.0" />
+		<TextField fx:id="username" layoutX="398.0" layoutY="151.0" />
 		<Label layoutX="294.0" layoutY="188.0" text="Password : ">
 			<font>
 				<Font size="18.0" />
 			</font>
 		</Label>
-		<TextField layoutX="400.0" layoutY="189.0" />
-		<Button layoutX="386.0" layoutY="240.0" mnemonicParsing="false"
-			prefHeight="37.0" prefWidth="69.0" text="Login">
+		<TextField fx:id="password" layoutX="400.0" layoutY="189.0" />
+		<Button layoutX="386.0" layoutY="240.0" mnemonicParsing="false" onAction="#onSubmit" prefHeight="37.0" prefWidth="69.0" text="Login">
 			<font>
 				<Font size="16.0" />
 			</font>
 		</Button>
-		<Hyperlink layoutX="457.0" layoutY="306.0"
-			onMouseClicked="#goToUserSignup" text="Sign-Up" underline="true">
+		<Hyperlink layoutX="457.0" layoutY="324.0" onMouseClicked="#goToUserSignup" text="Sign-Up" underline="true">
 			<font>
 				<Font size="13.0" />
 			</font>
 		</Hyperlink>
-		<Text layoutX="309.0" layoutY="324.0" strokeType="OUTSIDE"
-			strokeWidth="0.0" text="Don't have an Account? "
-			wrappingWidth="159.31219482421875">
+		<Text layoutX="309.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an Account? " wrappingWidth="159.31219482421875">
 			<font>
 				<Font size="14.0" />
 			</font>
 		</Text>
 		<Line endX="100.0" startX="-100.0" />
-		<Line endX="100.0" layoutX="415.0" layoutY="331.0" startX="100.0"
-			startY="-23.70001220703125" />
-		<Hyperlink layoutX="519.0" layoutY="306.0"
-			onMouseClicked="#goBackToHome" text="Home" underline="true">
+		<Line endX="100.0" layoutX="415.0" layoutY="350.0" startX="100.0" startY="-23.70001220703125" />
+		<Hyperlink layoutX="519.0" layoutY="324.0" onMouseClicked="#goBackToHome" text="Home" underline="true">
 			<font>
 				<Font size="13.0" />
 			</font>
 		</Hyperlink>
+      <Label fx:id="errorLabel" layoutX="305.0" layoutY="297.0" prefHeight="17.0" prefWidth="249.0" textFill="#f70202" />
 	</children>
 </Pane>

@@ -8,6 +8,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import org.openjfx.ems.Entity.User;
+
 /**
  * JavaFX App
  */
@@ -26,6 +28,22 @@ public class App extends Application {
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
+    
+    static void setRoot(String fxml, Object data) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        Parent parent = fxmlLoader.load();
+
+        // If data is provided, pass it to the controller
+        if (data != null) {
+            Object controller = fxmlLoader.getController();
+            if (controller instanceof UserDashboardController) {
+                ((UserDashboardController) controller).setUserDetails((User) data);
+            }
+        }
+
+        scene.setRoot(parent);
+    }
+    
 
     private static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));

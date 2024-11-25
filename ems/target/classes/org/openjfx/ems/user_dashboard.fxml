@@ -1,6 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" />
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.ems.UserDashboardController">
+	<children>
+		<Text layoutX="27.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee DashBoard" wrappingWidth="120.53668212890625">
+			<font>
+				<Font size="24.0" />
+			</font>
+		</Text>
+		<ImageView fitHeight="110.0" fitWidth="146.0" layoutX="14.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@images/user_login.jpeg" />
+			</image>
+		</ImageView>
+		<Text layoutX="214.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello, ">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Text>
+		<ImageView fitHeight="70.0" fitWidth="45.0" layoutX="530.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@images/user_login_icon.png" />
+			</image>
+		</ImageView>
+		<Hyperlink contentDisplay="CENTER" layoutX="529.0" layoutY="61.0" onMouseClicked="#ShowUserLoginPage" text="Logout" underline="true" />
+		<Label layoutX="217.0" layoutY="81.0" text="Phone : ">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label layoutX="217.0" layoutY="101.0" text="Email : ">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label layoutX="217.0" layoutY="121.0" text="Role : ">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label layoutX="217.0" layoutY="141.0" text="Salary : ">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label layoutX="217.0" layoutY="162.0" text="Gender : ">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label layoutX="217.0" layoutY="182.0" text="Username : ">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label layoutX="217.0" layoutY="58.0" text="Emplyee Id : ">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label layoutX="217.0" layoutY="204.0" text="Attendance : ">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<TableView layoutY="266.0" prefHeight="137.0" prefWidth="600.0">
+			<columns>
+				<TableColumn prefWidth="75.0" text="Task Id" />
+				<TableColumn prefWidth="251.199951171875" text="Task" />
+				<TableColumn minWidth="0.0" prefWidth="144.0" text="Due Date" />
+				<TableColumn prefWidth="128.79998779296875" text="Status" />
+			</columns>
+		</TableView>
+		<Label fx:id="phone" layoutX="357.0" layoutY="81.0" text="phone">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label fx:id="email" layoutX="357.0" layoutY="101.0" text="email ">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label fx:id="role" layoutX="357.0" layoutY="121.0" text="role">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label fx:id="salary" layoutX="357.0" layoutY="141.0" text="salary">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label fx:id="gender" layoutX="357.0" layoutY="162.0" text="gender">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label fx:id="username" layoutX="357.0" layoutY="182.0" text="username ">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label fx:id="name" layoutX="264.0" layoutY="27.0" prefHeight="27.0" prefWidth="203.0" text="Name">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label fx:id="attendance" layoutX="357.0" layoutY="204.0" text="attendance">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label fx:id="id" layoutX="359.0" layoutY="59.0" text="EID">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+	</children>
+</Pane>
