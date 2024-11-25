@@ -35,7 +35,7 @@ public class UserLoginController {
     	Session session = null;
     	try {
     		String enteredUsername = username.getText();
-    	    String enteredPassword = password.getText().trim();
+    	    String enteredPassword = password.getText();
 
     	    if (enteredUsername.isEmpty() || enteredPassword.isEmpty()) {
     	        errorLabel.setText("Username and Password cannot be empty!");

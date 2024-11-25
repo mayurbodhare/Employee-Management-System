@@ -33,34 +33,35 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="396.0" layoutY="161.0" />
+      <TextField fx:id="username" layoutX="396.0" layoutY="161.0" />
       <Label layoutX="292.0" layoutY="198.0" text="Password : ">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="398.0" layoutY="199.0" />
-      <Button layoutX="384.0" layoutY="250.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="69.0" text="Login">
+      <TextField fx:id="password" layoutX="398.0" layoutY="199.0" />
+      <Button fx:id="login" layoutX="384.0" layoutY="243.0" mnemonicParsing="false" onAction="#onSubmit" prefHeight="37.0" prefWidth="69.0" text="Login">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Hyperlink layoutX="455.0" layoutY="316.0" onMouseClicked="#goToAdminSignup" text="Sign-Up" underline="true">
+      <Hyperlink layoutX="455.0" layoutY="324.0" onMouseClicked="#goToAdminSignup" text="Sign-Up" underline="true">
          <font>
             <Font size="13.0" />
          </font>
       </Hyperlink>
-      <Text layoutX="308.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an Account? " wrappingWidth="159.31219482421875">
+      <Text layoutX="308.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an Account? " wrappingWidth="159.31219482421875">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
       <Line endX="100.0" startX="-100.0" />
-      <Line endX="100.0" layoutX="413.0" layoutY="341.0" startX="100.0" startY="-23.70001220703125" />
-      <Hyperlink layoutX="517.0" layoutY="316.0" onMouseClicked="#goBackToHome" text="Home" underline="true">
+      <Line endX="100.0" layoutX="413.0" layoutY="349.0" startX="100.0" startY="-23.70001220703125" />
+      <Hyperlink layoutX="517.0" layoutY="324.0" onMouseClicked="#goBackToHome" text="Home" underline="true">
          <font>
             <Font size="13.0" />
          </font>
       </Hyperlink>
+      <Label fx:id="errorLabel" layoutX="300.0" layoutY="296.0" prefHeight="17.0" prefWidth="249.0" textFill="#f70202" />
    </children>
 </Pane>

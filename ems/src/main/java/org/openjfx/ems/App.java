@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import org.openjfx.ems.Entity.Admin;
 import org.openjfx.ems.Entity.User;
 
 /**
@@ -38,6 +39,10 @@ public class App extends Application {
             Object controller = fxmlLoader.getController();
             if (controller instanceof UserDashboardController) {
                 ((UserDashboardController) controller).setUserDetails((User) data);
+            }
+            
+            if (controller instanceof AdminDashboardController) {
+                ((AdminDashboardController) controller).setUserDetails((Admin) data);
             }
         }
 

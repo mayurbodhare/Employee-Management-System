@@ -80,6 +80,9 @@ public class AdminSignupController implements Initializable{
 
             // Commit the transaction
             tx.commit();
+            
+          App.setRoot("admin_dashboard", newAdmin);
+
 
             System.out.println("User Signed Up Successfully!");
             

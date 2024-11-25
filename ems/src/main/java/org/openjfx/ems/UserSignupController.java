@@ -86,14 +86,10 @@ public class UserSignupController implements Initializable{
 
             // Commit the transaction
             tx.commit();
-
-            // TODO: send the data of the user
             
          // Pass the newUser to the dashboard
             App.setRoot("user_dashboard", newUser);
-            
-//            App.setRoot("user_dashboard");
-            
+                        
             System.out.println("User Signed Up Successfully!");
             
 		} catch (Exception e) {
