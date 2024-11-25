@@ -41,12 +41,12 @@
 				<Font size="18.0" />
 			</font>
 		</Label>
-		<Button fx:id="attendence_btn" layoutX="386.0" layoutY="87.0" mnemonicParsing="false" onAction="#addAttendence" text="Add Attendence">
+		<Button fx:id="attendence_btn" disable="true" layoutX="386.0" layoutY="87.0" mnemonicParsing="false" onAction="#addAttendence" text="Add Attendence">
 			<font>
 				<Font size="14.0" />
 			</font>
 		</Button>
-		<Label alignment="CENTER" layoutX="116.0" layoutY="117.0" prefHeight="27.0" prefWidth="328.0" text="Error Message" textAlignment="CENTER">
+		<Label fx:id="errorLabel" alignment="CENTER" layoutX="116.0" layoutY="117.0" prefHeight="27.0" prefWidth="328.0" textAlignment="CENTER" textFill="#ae0202">
 			<font>
 				<Font size="14.0" />
 			</font>
@@ -84,8 +84,16 @@
 				<TableColumn prefWidth="100.800048828125" text="Status" />
 			</columns>
 		</TableView>
-      <Hyperlink fx:id="logout" contentDisplay="CENTER" layoutX="540.0" layoutY="20.0" onMouseClicked="#ShowAdminLoginPage" text="Logout" underline="true" />
-      <Text fx:id="name" layoutX="455.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="admin name" />
+      <Hyperlink fx:id="logout" contentDisplay="CENTER" layoutX="540.0" layoutY="18.0" onMouseClicked="#ShowAdminLoginPage" text="Logout" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+      <Text fx:id="name" layoutX="455.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="admin name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
       <Line endX="9.5" endY="-0.39998626708984375" layoutX="529.0" layoutY="43.0" startX="9.5" startY="-22.799997329711914" />
 	</children>
 </Pane>

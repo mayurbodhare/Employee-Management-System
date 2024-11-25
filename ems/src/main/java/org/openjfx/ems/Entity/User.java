@@ -1,11 +1,18 @@
 package org.openjfx.ems.Entity;
 
+import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
+
+import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.JoinColumn;
 
 @Entity
 @Table(name = "users")
@@ -38,6 +45,10 @@ public class User {
 
     @Column(name = "password", nullable = false)
     private String password;
+    
+    @ElementCollection
+    @CollectionTable(name = "user_attendance", joinColumns = @JoinColumn(name = "user_id"))
+    private Set<LocalDate> attendanceDates = new HashSet<>();
 
 //     Default Constructor
     public User() {
@@ -126,6 +137,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+    
+    public Set<LocalDate> getAttendanceDates() {
+        return attendanceDates;
+    }
+
+    public void setAttendanceDates(Set<LocalDate> attendanceDates) {
+        this.attendanceDates = attendanceDates;
     }
 
     // toString Method for Debugging
